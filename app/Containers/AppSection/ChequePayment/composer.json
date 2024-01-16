@@ -1,0 +1,6 @@
+{
+    "name": "apiato/chequepayment",
+    "description": "ChequePayment Container for apiato.",
+    "require": {
+    }
+}

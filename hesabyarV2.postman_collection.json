@@ -1,0 +1,6176 @@
+{
+	"info": {
+		"_postman_id": "2215c396-3fd9-47fd-b039-e51d9b3acdd4",
+		"name": "hesabyarV2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26057322"
+	},
+	"item": [
+		{
+			"name": "تست سرور با بانک",
+			"item": [
+				{
+					"name": "لیست بانک ها",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjcyYjQzNjBlZjAwMmFmNTczZjBlYzYwN2QzOWMwOWQ1MzNhYTVhNDE3MzliMDFhNjYxZGY2Y2RhNmUzYTMxMjg5NGY3NWZmNTllNGM2NDIiLCJpYXQiOjE2ODU3Nzc1NzcuMTA2MzUzLCJuYmYiOjE2ODU3Nzc1NzcuMTA2MzU2LCJleHAiOjE2ODU4NjM5NzcuMDkyNDIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.w_5zeml4R74v1AQ7BQg3CCBgW1gHmtwTOWuQcRdmcmYeZIbYBFwJhbxmpKAop8RddSdXVMwTdPQ5PUHBpLlk5dmOFebtjAJHLnKP5oejLUHYoEXGaftQFoQadjc25mE5YOeWSkq1I72vxabixPUlO4tYF9nyeEi8NG5d6XIXKnlGASTpId4_P3vax5eOal_orZp0l4O70XUfHxqcqCj1izB93d9y0CrSf8kCIfqaFNjeFkt-SoRGKAEgD6m0cBY5n-4HS-4kuWbZr8TvqbA3kW1a4S6qDqpCnTvAEq5Eh27lK18nK4U7mvYwwo96m4wRuiG7ZpLIfFZb4IUiZCHOGCx8zPObdZ63AJBb8TxWL0OpAZvpoWE6mvgzDwgujF1AwWJ31oYhnZWfYhMwHvuvYJS9FwECB8p9u6ehci5vZo_3eOf8YY2c9R03Go09ado1Lvt4_-02ykrYfACIUf8TGF1IJDDyBfSGaKTArEwlRNkMhE7NO6nRzl2hQN8EoCq5xnZ1RbF4FQOkwNaoj3R1u_dmZN0toLASaERenzX_oUtXjlN-lre4B8pQoaauW75GgaqGFGozPJnxkq43RQrU7Tn9f3bcS2thLnz9ZjftxvdsaL7sTUDHrloUHPuKbuZC63-syRkqQgRoqg0STuo1rQsV7e_p_M3OW6bX7z2mxos",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://api.deeco.ir/v1/banks",
+							"protocol": "https",
+							"host": [
+								"api",
+								"deeco",
+								"ir"
+							],
+							"path": [
+								"v1",
+								"banks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن بانک جدید",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "main",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								},
+								{
+									"key": "person_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.deeco.ir/v1/banks",
+							"protocol": "https",
+							"host": [
+								"api",
+								"deeco",
+								"ir"
+							],
+							"path": [
+								"v1",
+								"banks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن بانک ",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/banks/XbPW7awNkzl83LD6",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"banks",
+								"XbPW7awNkzl83LD6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن بانک ",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/banks/NxOpZowo9GmjKqdR",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"banks",
+								"NxOpZowo9GmjKqdR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی بانک ها",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/banks/XbPW7awNkzl83LD6",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"banks",
+								"XbPW7awNkzl83LD6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ثبت/ورود/اطلاعات/  کاربر",
+			"item": [
+				{
+					"name": "مشخصات کاربر لاگین شده",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/profile",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ثبت کاربر",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "999@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678Abn@",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "akbar",
+									"type": "text"
+								},
+								{
+									"key": "commission",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Navid/Desktop/0005850_-wm-m78-7-.jpeg"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"description": "1 = seller , 0 = user",
+									"type": "text"
+								},
+								{
+									"key": "parent_id",
+									"value": "XbPW7awNkzl83LD6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/register",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "لیست کاربر",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "1111@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678Abn@",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "akbar",
+									"type": "text"
+								},
+								{
+									"key": "commission",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Navid/Downloads/Xb665JPfaN5LrYe0yAzOl9D63f3unMkoS9OdLZvBQ8iZDteZMB.jpg_256X256X70.jpg"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/users",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی کاربر",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "1111@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678Abn@",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "akbar",
+									"type": "text"
+								},
+								{
+									"key": "commission",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Navid/Downloads/Xb665JPfaN5LrYe0yAzOl9D63f3unMkoS9OdLZvBQ8iZDteZMB.jpg_256X256X70.jpg"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/users/aYOxlpzRMwrX3gD7",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"users",
+								"aYOxlpzRMwrX3gD7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کاربر",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "1111@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678Abn@",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "akbar",
+									"type": "text"
+								},
+								{
+									"key": "commission",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Navid/Downloads/Xb665JPfaN5LrYe0yAzOl9D63f3unMkoS9OdLZvBQ8iZDteZMB.jpg_256X256X70.jpg"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/users/aYOxlpzRMwrX3gD7",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"users",
+								"aYOxlpzRMwrX3gD7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کاربر",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "1111@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678Abn@",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "akbar",
+									"type": "text"
+								},
+								{
+									"key": "commission",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Navid/Desktop/0005850_-wm-m78-7-.jpeg"
+								},
+								{
+									"key": "_method",
+									"value": "patch",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/users/39n0Z12OZGKERJgW",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"users",
+								"39n0Z12OZGKERJgW"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ورود کاربر",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "2@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678Abn@",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/clients/web/login",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"clients",
+								"web",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "رفرش توکن",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "refresh_token",
+									"value": "def50200f77802074f5dcf559ead4dc25c6b2d556d09ca14e541185373a6181597d64f4b5b527c32a141141023203c301fe43373a78c5880e1192ab36e38cd041e20e6fa83da292ab403226871276b0bcf8d69bf0d99af861612c846249b1fcd04c70635c1f5e29200cf83cf83e6fd82963dcac026f3ff45ddded68f41f6353c1e0662e69d75409a6d1726d8eaaf98ae4b54af0607411329b092d1ff20a78adfd1fba677f5eaa5d4f07fe598e2fa96e821672313f6ba0962919971e7e2a06384bb0dc12fbf315bee92d2b6bc7581436633f76e0e162627e225b21b591c432ad39458960f2cfa3c2c6a9ce17986a267d6d8006d044e9c5f697b9f274db1f6a774d1b069fca8618cd70ccd24dbaeb41c1709ef5dbe7fa152d7e85c54c3888e830d2d0039fe434d16a025a3ce50a5fc50b64dae90448c372e80e7611b79e15668cd50e5598f573294410430b09d9d035aeb44f3af627d36a9873e684f3fe8aa2c4769",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/clients/web/refresh",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"clients",
+								"web",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ثبت نام/ورود ادمین",
+			"item": [
+				{
+					"name": "ورود ادمین",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/clients/web/login",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"clients",
+								"web",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "دسترسی ها",
+			"item": [
+				{
+					"name": "دادن دسترسی به نقش ها",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "role_id",
+									"value": "39n0Z12OZGKERJgW",
+									"type": "text"
+								},
+								{
+									"key": "permissions_ids[0]",
+									"value": "WJedP3w5rgzxR5lg",
+									"type": "text"
+								},
+								{
+									"key": "permissions_ids[1]",
+									"value": "0QvXO3GJ3B2kxAqY",
+									"type": "text"
+								},
+								{
+									"key": "permissions_ids[2]",
+									"value": "76qxErGXW5zyXP3l",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/permissions/attach",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"permissions",
+								"attach"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "دادن دسترسی به کاربر",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/users/{id}/permissions",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"users",
+								"{id}",
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف دسترسی از نقش",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/permissions/detach",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"permissions",
+								"detach"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف دسترسی کاربر",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/users/{id}/permissions",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"users",
+								"{id}",
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی دسترسی ها",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/permissions/{id}",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"permissions",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "لیست دسترسی ها",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/permissions?page=13",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"permissions"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "13"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش دسترسی های کاربر",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/users/{id}/permissions",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"users",
+								"{id}",
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "همگام سازی دسترسی ها در نقش",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/permissions/sync",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"permissions",
+								"sync"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "نقش ها",
+			"item": [
+				{
+					"name": "دادن نقش به کاربر",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/roles/assign",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"roles",
+								"assign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ایجاد نقش",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "visitor_factor",
+									"type": "text"
+								},
+								{
+									"key": "display_name",
+									"value": "create factors",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/roles",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف نقش ها",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/roles/{id}",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"roles",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی نقش ها",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/roles/{id}",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"roles",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "لیست نقش ها",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/roles",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش دسترسی های نقش",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/roles/{id}/permissions",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"roles",
+								"{id}",
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش نقش های کاربر",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/users/{id}/roles",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"users",
+								"{id}",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "گرفتن نقش از کاربر",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/roles/revoke",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"roles",
+								"revoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "همگام سازی نقش های کاربر",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/roles/sync",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"roles",
+								"sync"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "بانک",
+			"item": [
+				{
+					"name": "لیست بانک ها",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/banks",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"banks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن بانک جدید",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "main",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/banks",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"banks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن بانک ",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mellat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								},
+								{
+									"key": "person_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/banks/NxOpZowo9GmjKqdR",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"banks",
+								"NxOpZowo9GmjKqdR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن بانک ",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/banks/NxOpZowo9GmjKqdR",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"banks",
+								"NxOpZowo9GmjKqdR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی بانک ها",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/banks/pJxe0mwAewonZBMP",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"banks",
+								"pJxe0mwAewonZBMP"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "لیست نام بانک ها",
+			"item": [
+				{
+					"name": "لیست نام بانک ها",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/bank-name-lists",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"bank-name-lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن نام بانک جدید",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "mellat",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/bank-name-lists",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"bank-name-lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن نام بانک",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/bank-name-lists",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"bank-name-lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن نام بانک",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/bank-name-lists",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"bank-name-lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی نام بانک ها",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/bank-name-lists",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"bank-name-lists"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "صندوق",
+			"item": [
+				{
+					"name": "لیست صندوق ها",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/funds",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"funds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن صندوق جدید",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/funds",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"funds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن صندوق",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/funds/NxOpZowo9GmjKqdR",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"funds",
+								"NxOpZowo9GmjKqdR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن صندوق",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/funds/NxOpZowo9GmjKqdR",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"funds",
+								"NxOpZowo9GmjKqdR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی صندوق ها",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/funds/NxOpZowo9GmjKqdR",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"funds",
+								"NxOpZowo9GmjKqdR"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "فروشنده",
+			"item": [
+				{
+					"name": "لیست فروشنده",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/sellers",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"sellers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی فروشندگان",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/sellers/XbPW7awNkzl83LD6",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"sellers",
+								"XbPW7awNkzl83LD6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "شرکت",
+			"item": [
+				{
+					"name": "لیست شرکت",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/companies",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن شرکت",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "registration_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "province",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test@test.com",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "http://www.1.com",
+									"type": "text"
+								},
+								{
+									"key": "national_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "economic_code",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/E:/Picture/Damavand/Damavand.22.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/companies",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن شرکت",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/C:/Users/Navid/Desktop/0005850_-wm-m78-7-.jpeg"
+								},
+								{
+									"key": "registration_number",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "province",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test@test.com",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "http://www.1.com",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "patch",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/companies/aVbqKPzWy2pj0JZg",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"companies",
+								"aVbqKPzWy2pj0JZg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن شرکت",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/companies/KJqn4Z26Owdlv6MB",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"companies",
+								"KJqn4Z26Owdlv6MB"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی شرکت",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/companies/XbPW7awNkzl83LD6",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"companies",
+								"XbPW7awNkzl83LD6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "تامین کننده",
+			"item": [
+				{
+					"name": "لیست تامین کننده",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/suppliers",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن تامین کننده",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "registration_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "province",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test@test.com",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "http://www.1.com",
+									"type": "text"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/C:/Users/Navid/Downloads/Xb665JPfaN5LrYe0yAzOl9D63f3unMkoS9OdLZvBQ8iZDteZMB.jpg_256X256X70.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/suppliers",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن تامین کننده",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "registration_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "province",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test@test.com",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "http://www.1.com",
+									"type": "text"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/C:/Users/Navid/Desktop/0005850_-wm-m78-7-.jpeg"
+								},
+								{
+									"key": "_method",
+									"value": "patch",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/suppliers/39n0Z12OZGKERJgW",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"suppliers",
+								"39n0Z12OZGKERJgW"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن تامین کننده",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/suppliers/39n0Z12OZGKERJgW",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"suppliers",
+								"39n0Z12OZGKERJgW"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی تامین کننده",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/companies/XbPW7awNkzl83LD6",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"companies",
+								"XbPW7awNkzl83LD6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "درامد جانبی",
+			"item": [
+				{
+					"name": "لیست درامد جانبی",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/side-incomes",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-incomes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن درامد جانبی",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"payment_method\":1, //1 online, 2 pose\r\n    \"type\":2,\r\n    \"title\":\"hgfg\",\r\n    \"amount\":10000,\r\n    \"date\":\"2023-05-29 12:58:30\",\r\n    \"side_income_category_id\":\"NxOpZowo9GmjKqdR\",\r\n    \"person_id\":\"NxOpZowo9GmjKqdR\",\r\n    \"fund_id\": \"NxOpZowo9GmjKqdR\",\r\n    \"user_id\": \"aYOxlpzRMwrX3gD7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/side-incomes",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-incomes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن درامد جانبی",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\":2,\r\n    \"title\":\"hgfg\",\r\n    \"amount\":60,\r\n    \"date\":\"2023-05-29 12:58:30\",\r\n    \"side_income_category_id\":\"NxOpZowo9GmjKqdR\",\r\n    \"person_id\":\"NxOpZowo9GmjKqdR\",\r\n    \"fund_id\": \"NxOpZowo9GmjKqdR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/side-incomes/ONloWPwVnwvJg84X",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-incomes",
+								"ONloWPwVnwvJg84X"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن درامد جانبی",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/side-incomes/XbPW7awNkzl83LD6",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-incomes",
+								"XbPW7awNkzl83LD6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی درامد جانبی",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/side-incomes/aYOxlpzRMwrX3gD7",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-incomes",
+								"aYOxlpzRMwrX3gD7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "دسته بندی درامد جانبی",
+			"item": [
+				{
+					"name": "لیست دسته بندی درامد جانبی",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/side-income-categories",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-income-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن دسته بندی درامد جانبی",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "hgfg",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "12213213213",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/side-income-categories",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-income-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن دسته بندی درامد جانبی",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "hgfg",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "12213213213",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/side-income-categories",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-income-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن دسته بندی درامد جانبی",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/side-income-categories/NxOpZowo9GmjKqdR",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-income-categories",
+								"NxOpZowo9GmjKqdR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی دسته بندی درامد جانبی",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/side-income-categories",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-income-categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "هزینه جانبی",
+			"item": [
+				{
+					"name": "لیست هزینه جانبی",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/side-costs",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-costs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن هزینه جانبی",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"payment_method\":1, //1 online, 2 pose\r\n    \"type\":1,\r\n    \"title\":\"hgfg\",\r\n    \"amount\":10,\r\n    \"date\":\"2023-05-29 12:58:30\",\r\n    \"side_cost_category_id\":\"NxOpZowo9GmjKqdR\",\r\n    \"person_id\":\"NxOpZowo9GmjKqdR\",\r\n    \"bank_id\":\"NxOpZowo9GmjKqdR\",\r\n    \"user_id\": \"XbPW7awNkzl83LD6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/side-costs",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-costs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن هزینه جانبی",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\":1,\r\n    \"title\":\"hgfg\",\r\n    \"amount\":11,\r\n    \"date\":\"2023-05-29 12:58:30\",\r\n    \"side_cost_category_id\":\"NxOpZowo9GmjKqdR\",\r\n    \"person_id\":\"NxOpZowo9GmjKqdR\",\r\n    \"bank_id\":\"NxOpZowo9GmjKqdR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/side-costs/O9apoVGyLz5qNX4K",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-costs",
+								"O9apoVGyLz5qNX4K"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن هزینه جانبی",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/side-costs/XbPW7awNkzl83LD6",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-costs",
+								"XbPW7awNkzl83LD6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی هزینه جانبی",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/side-costs/NxOpZowo9GmjKqdR",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-costs",
+								"NxOpZowo9GmjKqdR"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "دسته بندی هزینه جانبی",
+			"item": [
+				{
+					"name": "لیست دسته بندی هزینه جانبی",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/side-cost-categories",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-cost-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن دسته بندی  هزینه جانبی",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "hgfg",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/side-cost-categories",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-cost-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن دسته بندی هزینه جانبی",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{Url}}/side-cost-categories",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-cost-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن دسته بندی هزینه جانبی",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/side-cost-categories",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-cost-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی دسته بندی هزینه جانبی",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/side-cost-categories",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"side-cost-categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "اشخاص",
+			"item": [
+				{
+					"name": "لیست اشخاص",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/persons",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"persons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن اشخاص",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "family",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "province",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "postal_code",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "telephone_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "fax_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "1@2.com",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "http://www.111.com",
+									"type": "text"
+								},
+								{
+									"key": "company_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "person_category_id",
+									"value": "NxOpZowo9GmjKqdR",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Navid/Desktop/0005850_-wm-m78-7-.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/persons",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"persons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن اشخاص",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "family",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "province",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "postal_code",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "telephone_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "national_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "economic_code",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "registration_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "fax_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "1@2.com",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "http://www.111.com",
+									"type": "text"
+								},
+								{
+									"key": "company_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "person_category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Navid/Desktop/0005850_-wm-m78-7-.jpeg"
+								},
+								{
+									"key": "_method",
+									"value": "patch",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/persons/aVbqKPzWy2pj0JZg",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"persons",
+								"aVbqKPzWy2pj0JZg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن اشخاص",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/persons/aVbqKPzWy2pj0JZg",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"persons",
+								"aVbqKPzWy2pj0JZg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی اشخاص",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/persons/XbPW7awNkzl83LD6?include=personCategory,company",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"persons",
+								"XbPW7awNkzl83LD6"
+							],
+							"query": [
+								{
+									"key": "include",
+									"value": "personCategory,company"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "دسته بندی اشخاص",
+			"item": [
+				{
+					"name": "لیست دسته بندی اشخاص",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/person-categories",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"person-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن دسته بندی اشخاص",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/person-categories",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"person-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن دسته بندی اشخاص",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/person-categories/NxOpZowo9GmjKqdR",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"person-categories",
+								"NxOpZowo9GmjKqdR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن دسته بندی اشخاص",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/person-categories/NxOpZowo9GmjKqdR",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"person-categories",
+								"NxOpZowo9GmjKqdR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی دسته بندی اشخاص",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/person-categories/NxOpZowo9GmjKqdR",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"person-categories",
+								"NxOpZowo9GmjKqdR"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "سهامداران",
+			"item": [
+				{
+					"name": "لیست سهامداران",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/stockholders",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"stockholders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن سهامداران",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "family",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "province",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "postal_code",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "telephone_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "alias",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "national_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "economic_code",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "registration_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "fax_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "1@2.com",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "http://www.111.com",
+									"type": "text"
+								},
+								{
+									"key": "company_id",
+									"value": "1a",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Navid/Downloads/Xb665JPfaN5LrYe0yAzOl9D63f3unMkoS9OdLZvBQ8iZDteZMB.jpg_256X256X70.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/stockholders",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"stockholders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن سهامداران",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "family",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "province",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "postal_code",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "telephone_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "alias",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "national_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "economic_code",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "registration_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "fax_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "1@2.com",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "http://www.111.com",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Navid/Desktop/0005850_-wm-m78-7-.jpeg"
+								},
+								{
+									"key": "_method",
+									"value": "patch",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/stockholders/aYOxlpzRMwrX3gD7",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"stockholders",
+								"aYOxlpzRMwrX3gD7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن سهامداران",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/stockholders/aYOxlpzRMwrX3gD7",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"stockholders",
+								"aYOxlpzRMwrX3gD7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی سهامداران",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/stockholders/XbPW7awNkzl83LD6?include=company",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"stockholders",
+								"XbPW7awNkzl83LD6"
+							],
+							"query": [
+								{
+									"key": "include",
+									"value": "company"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "دسته بندی محصولات",
+			"item": [
+				{
+					"name": "لیست دسته بندی محصولات",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/product-categories",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"product-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن دسته بندی محصولات جدید",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/product-categories",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"product-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن دسته بندی محصولات",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/product-categories/NxOpZowo9GmjKqdR",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"product-categories",
+								"NxOpZowo9GmjKqdR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن دسته بندی محصولات",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/product-categories/NxOpZowo9GmjKqdR",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"product-categories",
+								"NxOpZowo9GmjKqdR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی دسته بندی محصولات",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/product-categories/XbPW7awNkzl83LD6",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"product-categories",
+								"XbPW7awNkzl83LD6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "محصولات",
+			"item": [
+				{
+					"name": "لیست محصولات",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/products",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن محصولات",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"description": "type = 0 قیمت خرید / type = 1 هزینه تولید",
+									"type": "text"
+								},
+								{
+									"key": "buy_price",
+									"value": "1",
+									"description": "if type = 0",
+									"type": "text"
+								},
+								{
+									"key": "sale_price",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "total_working_hours",
+									"value": "1",
+									"description": "if type = 1",
+									"type": "text"
+								},
+								{
+									"key": "continuous_material_rate",
+									"value": "1",
+									"description": "if type = 1",
+									"type": "text"
+								},
+								{
+									"key": "direct_working_rate",
+									"value": "1",
+									"description": "if type = 1",
+									"type": "text"
+								},
+								{
+									"key": "other_costs",
+									"value": "1",
+									"description": "if type = 1",
+									"type": "text"
+								},
+								{
+									"key": "total_materials_used",
+									"value": "1",
+									"description": "if type = 1",
+									"type": "text"
+								},
+								{
+									"key": "indirect_cost_of_work",
+									"value": "1",
+									"description": "if type = 1",
+									"type": "text"
+								},
+								{
+									"key": "indirect_cost_of_material",
+									"value": "1",
+									"description": "if type = 1",
+									"type": "text"
+								},
+								{
+									"key": "product_category_id",
+									"value": "NxOpZowo9GmjKqdR",
+									"type": "text"
+								},
+								{
+									"key": "unit_id",
+									"value": "NxOpZowo9GmjKqdR",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Navid/Desktop/0005850_-wm-m78-7-.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/products",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن محصولات",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "buy_price",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sale_price",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "total_working_hours",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "continuous_material_rate",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "direct_working_rate",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "other_costs",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "total_materials_used",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "indirect_cost_of_work",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "indirect_cost_of_material",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "product_category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Navid/Desktop/0005850_-wm-m78-7-.jpeg"
+								},
+								{
+									"key": "_method",
+									"value": "patch",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/products/aVbqKPzWy2pj0JZg",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"products",
+								"aVbqKPzWy2pj0JZg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن محصولات",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/products",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی محصولات",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/products/NxOpZowo9GmjKqdR",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"products",
+								"NxOpZowo9GmjKqdR"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "پرداخت چک",
+			"item": [
+				{
+					"name": "لیست چک های پرداختی",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/cheque-payments",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"cheque-payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن چک های پرداختی",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "2023-05-30 09:26:49",
+									"type": "text"
+								},
+								{
+									"key": "bank_name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "branch_name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "person_id",
+									"value": "NxOpZowo9GmjKqdR",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/cheque-payments",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"cheque-payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن چک های پرداختی",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "date",
+									"value": "2023-05-30 09:26:49",
+									"type": "text"
+								},
+								{
+									"key": "bank_name",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "branch_name",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "person_id",
+									"value": "NxOpZowo9GmjKqdR",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/cheque-payments/NxOpZowo9GmjKqdR",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"cheque-payments",
+								"NxOpZowo9GmjKqdR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن وضعیت چک های پرداختی",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/cheque-payments/status/aYOxlpzRMwrX3gD7",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"cheque-payments",
+								"status",
+								"aYOxlpzRMwrX3gD7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن چک های پرداختی",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/cheque-payments/aYOxlpzRMwrX3gD7",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"cheque-payments",
+								"aYOxlpzRMwrX3gD7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی چک های پرداختی",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/cheque-payments/aYOxlpzRMwrX3gD7",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"cheque-payments",
+								"aYOxlpzRMwrX3gD7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "دریافت چک",
+			"item": [
+				{
+					"name": "لیست چک های دریافتی",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/cheque-receiveds",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"cheque-receiveds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن چک های دریافتی",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "2023-05-30 09:26:49",
+									"type": "text"
+								},
+								{
+									"key": "branch_name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "3000",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"description": "صفر در جریان وصول، یک وصول شده، دو خرج شده، سه اودت شده",
+									"type": "text"
+								},
+								{
+									"key": "cheque_image",
+									"type": "file",
+									"src": "/C:/Users/Navid/Desktop/trendyiol.jpeg"
+								},
+								{
+									"key": "bank_name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "person_id",
+									"value": "NxOpZowo9GmjKqdR",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "XbPW7awNkzl83LD6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/cheque-receiveds",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"cheque-receiveds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن چک های دریافتی",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "2023-05-30 09:26:49",
+									"type": "text"
+								},
+								{
+									"key": "branch_name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "bank_name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "person_id",
+									"value": "NxOpZowo9GmjKqdR",
+									"type": "text"
+								},
+								{
+									"key": "cheque_image",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "user_id",
+									"value": "XbPW7awNkzl83LD6",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "patch",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/cheque-receiveds/NxOpZowo9GmjKqdR",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"cheque-receiveds",
+								"NxOpZowo9GmjKqdR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن وضعیت چک های دریافتی",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/cheque-receiveds/status/aYOxlpzRMwrX3gD7",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"cheque-receiveds",
+								"status",
+								"aYOxlpzRMwrX3gD7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن چک های دریافتی",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/cheque-receiveds/AKxY1RwjE2EN40rm",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"cheque-receiveds",
+								"AKxY1RwjE2EN40rm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی چک های دریافتی",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/cheque-receiveds/AKxY1RwjE2EN40rm",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"cheque-receiveds",
+								"AKxY1RwjE2EN40rm"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "فاکتور خرید محصول",
+			"item": [
+				{
+					"name": "لیست فاکتور های خرید محصول",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/buy-product-factors",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"buy-product-factors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن فاکتور خرید محصول",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"1\",\r\n    \"date\":\"2023-05-31 05:29:22\",\r\n    \"discount_type\":\"1\", // 1 is percent\r\n    \"discount\":1,\r\n    \"tax\":1,\r\n    \"person_id\":\"NxOpZowo9GmjKqdR\",\r\n    \"description\":\"1\",\r\n    \"products\":[\r\n        {\r\n            \"product_id\":\"NxOpZowo9GmjKqdR\",    \r\n            \"quantity\":300\r\n        },\r\n        {\r\n            \"product_id\":\"XbPW7awNkzl83LD6\",    \r\n            \"quantity\":500\r\n        },\r\n        {\r\n             \"product_id\":\"aYOxlpzRMwrX3gD7\",    \r\n            \"quantity\":500\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/buy-product-factors",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"buy-product-factors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن فاکتور خرید محصول",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"1\",\r\n    \"date\":\"2023-05-31 05:29:22\",\r\n    \"discount_type\":\"1\", // 1 is percent\r\n    \"discount\":1,\r\n    \"tax\":1,\r\n    \"person_id\":\"NxOpZowo9GmjKqdR\",\r\n    \"description\":\"1\",\r\n    \"products\":[\r\n        {\r\n            \"product_id\":\"NxOpZowo9GmjKqdR\",    \r\n            \"quantity\":1160\r\n        },\r\n        {\r\n            \"product_id\":\"XbPW7awNkzl83LD6\",    \r\n            \"quantity\":800\r\n        },\r\n        {\r\n             \"product_id\":\"aYOxlpzRMwrX3gD7\",    \r\n            \"quantity\":1\r\n        \r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/buy-product-factors/KJqn4Z26Owdlv6MB",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"buy-product-factors",
+								"KJqn4Z26Owdlv6MB"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن فاکتور خرید محصول",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/buy-product-factors/NqeELPGl8GmVOM7Z",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"buy-product-factors",
+								"NqeELPGl8GmVOM7Z"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی فاکتور خرید محصول",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/buy-product-factors/NxOpZowo9GmjKqdR",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"buy-product-factors",
+								"NxOpZowo9GmjKqdR"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "فاکتور برگشتی خرید محصول",
+			"item": [
+				{
+					"name": "لیست فاکتور برگشتی خرید محصول",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/buy-product-factor-reverses",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"buy-product-factor-reverses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی فاکتور برگشتی خرید محصول",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/buy-product-factor-reverses",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"buy-product-factor-reverses"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "فاکتور فروش محصول",
+			"item": [
+				{
+					"name": "لیست فاکتور های فروش محصول",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/sell-product-factors",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"sell-product-factors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن فاکتور فروش محصول",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"111111\",\r\n    \"due_date\":\"2023-05-31 05:29:22\",\r\n    \"sell_date\":\"2023-05-31 05:29:22\",\r\n    \"discount_type\":\"1\",\r\n    \"discount\":5,  // 1 is percent\r\n    \"tax\":9,\r\n    \"supplier_id\":\"NxOpZowo9GmjKqdR\",\r\n    \"user_id\":\"O9apoVGyLz5qNX4K\",\r\n    \"person_id\":\"NxOpZowo9GmjKqdR\",\r\n    \"description\":\"1\",\r\n    \"products\":[\r\n        {\r\n            \"product_id\":\"XbPW7awNkzl83LD6\",    \r\n            \"quantity\":100\r\n        },\r\n        {\r\n            \"product_id\":\"NxOpZowo9GmjKqdR\",    \r\n            \"quantity\":100\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/sell-product-factors",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"sell-product-factors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن فاکتور فروش محصول",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"111111\",\r\n    \"due_date\":\"2023-05-31 05:29:22\",\r\n    \"sell_date\":\"2023-05-31 05:29:22\",\r\n    \"discount_type\":\"1\",\r\n    \"discount\":1,  // 1 is percent\r\n    \"tax\":1,\r\n    \"supplier_id\":\"NxOpZowo9GmjKqdR\",\r\n    \"user_id\":\"XbPW7awNkzl83LD6\",\r\n    \"person_id\":\"NxOpZowo9GmjKqdR\",\r\n    \"description\":\"1\",\r\n    \"products\":[\r\n        {\r\n            \"product_id\":\"XbPW7awNkzl83LD6\",    \r\n            \"quantity\":80510689\r\n        },\r\n        {\r\n            \"product_id\":\"NxOpZowo9GmjKqdR\",    \r\n            \"quantity\":50\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/sell-product-factors/7VgmkMw7R2pWO5ja",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"sell-product-factors",
+								"7VgmkMw7R2pWO5ja"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن فاکتور فروش محصول",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/sell-product-factors/XbPW7awNkzl83LD6",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"sell-product-factors",
+								"XbPW7awNkzl83LD6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی فاکتور فروش محصول",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/sell-product-factors/NxOpZowo9GmjKqdR",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"sell-product-factors",
+								"NxOpZowo9GmjKqdR"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "فاکتور برگشتی فروش محصول",
+			"item": [
+				{
+					"name": "لیست فاکتور برگشتی فروش محصول",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/sell-product-factor-reverses",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"sell-product-factor-reverses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی فاکتور برگشتی فروش محصول",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/sell-product-factor-reverses",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"sell-product-factor-reverses"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "تراکنش ها",
+			"item": [
+				{
+					"name": "لیست تراکنش ها",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/transactions",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن تراکنش",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"is_deposit\": 0,\r\n    \"amount\":19,\r\n    \"type\":0, // type 1 = cheque/ 2 = bank/ 3 = fund\r\n    \"person_id\":\"NxOpZowo9GmjKqdR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/transactions",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن تراکنش",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "buy_price",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sale_price",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "total_working_hours",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "continuous_material_rate",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "total_materials_used",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "indirect_cost_of_work",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "indirect_cost_of_material",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "other_costs",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "product_category_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/transactions",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن تراکنش",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/transactions",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی تراکنش",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/transactions",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "واحد",
+			"item": [
+				{
+					"name": "لیست واحد ها",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/units",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"units"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "اضافه کردن واحد",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "unit",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/units",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"units"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ویرایش کردن واحد",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{Url}}/units",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"units"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "حذف کردن واحد",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bank_name",
+									"value": "Tejarat",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "tets",
+									"type": "text"
+								},
+								{
+									"key": "account_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "cart_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "shaba_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "pos_number",
+									"value": "1234567890987654",
+									"type": "text"
+								},
+								{
+									"key": "account_owner",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some text",
+									"type": "text"
+								},
+								{
+									"key": "inventory",
+									"value": "1000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Url}}/units",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"units"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "نمایش تکی واحد",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/units",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"units"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "گزارش های مالی",
+			"item": [
+				{
+					"name": "گزارش های مالی",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/financial-reports",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"financial-reports"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "داشبورد",
+			"item": [
+				{
+					"name": "داشبورد",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Url}}/dashboards",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"dashboards"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{Token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.request.headers.add({",
+					"  key: \"Accept\",",
+					"  value: \"application/json\"",
+					"});"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiZjc2ZThlZDVhY2VmOTA1YmRhNTk2NDRjYmMzNmUxMDRjNzlhN2ZmOWE3MzNiZDk0YTNmNGY5OGViODQxNTk5MjE5YWY1ZWZhYjZiMjViZDQiLCJpYXQiOjE2ODgzNjc1MTIuODIyODc1LCJuYmYiOjE2ODgzNjc1MTIuODIyODgsImV4cCI6MTY4ODQ1MzkxMi41NjM3NDMsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.IvDcA7YktZ941jKuVOSH6sAb5_Dl9OvuItl53QCK4EAvOxCG8WfI7G761IJQ5RmnokTXlW09mt846XbkSqxD_1CS-76IPLDlBQKwJnj5SJ7Frp7A7C0_v2hNtldmuYwo26qPNh8pDalwBbaFKdikbKHUwFJ6W-Zz8MwMQObnKLSFPinskJRvuBPQpSHcaxZ8hOAO-hL7xyRcpOB3JxEBXfKYWNIvwMYYCyWeh9sW_I0mqAu6QoiwUGfmwqgoI0tTI-8uFFj_NP1_xe62yaxO0v6DBvm38ZLqKli4nP5Dmb8DDEC5wB94NvCMrDVyekGmJ_jISvxaP6LwS6kIFE_KhwyxkZPC5Cr2I-WAlc_PH1-jOmzK93JyM1r_j4BGgAxC1HuKwW7TgcsU-w1PU5HTmCBStobHqlUKM1rNRS8QF11zJWHo4Pp0CzpIQJ4KpavoV9PeIonhMIIR4Wrp480QUlUUwEKmgJFGOh-C7ucTpUdpJEwLcuGMBL_cUR8QjFoO4uvURxUicuzfxeCNwrETD2NVhn76_5WKRVitEFuE0oST8myh8D5qOH2YAFn2lV9RDziFm5t9_4DLbnx0jVRwgxVY2ZnLnnqnn-z0-UvV-hYrAS_Yp70nhIu8xAetI1PcSz_05ok3mw5dMG_VhQj4aFZBQGHgJxjFWMarGGNaxIU",
+			"type": "string"
+		},
+		{
+			"key": "Url",
+			"value": "localhost:8000/v1",
+			"type": "string"
+		}
+	]
+}

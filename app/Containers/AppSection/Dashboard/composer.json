@@ -1,0 +1,6 @@
+{
+    "name": "apiato/dashboard",
+    "description": "Dashboard Container for apiato.",
+    "require": {
+    }
+}
